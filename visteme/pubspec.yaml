@@ -55,6 +55,11 @@ dependencies:
   freezed_annotation: 
   flutter_riverpod: 
   dio: 
+  get_it:
+  dartz:
+  bloc:
+  responsive_builder:
+  carousel_slider:
 
 dev_dependencies:
   flutter_test:
@@ -68,8 +73,7 @@ dev_dependencies:
   build_runner: 
   freezed:
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+
 
 # The following section is specific to Flutter.
 flutter:
@@ -109,6 +113,9 @@ flutter:
          - asset: assets/fonts/Courgette-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+     - family: Kalam
+       fonts:
+         - asset: assets/fonts/Kalam-Regular.ttf
+     - family: Birthstone
+       fonts:
+         - asset: assets/fonts/Birthstone-Regular.ttf

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:visteme/presentation/bloc/auth_cubit.dart';
+import 'package:visteme/presentation/bloc/auth%20cubit/auth_cubit.dart';
 import 'package:visteme/src/navigation/routes.dart';
 
 final _navigatorKey = GlobalKey<NavigatorState>();

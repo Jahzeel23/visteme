@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:visteme/presentation/ui/home/guardar_datos.dart';
-import 'package:visteme/presentation/ui/home/home.dart';
-import 'package:visteme/presentation/ui/login/intro_screen.dart';
-import 'package:visteme/presentation/ui/login/splash_screen.dart';
+import 'package:visteme/presentation/pages/home/my_home.dart';
+import 'package:visteme/presentation/pages/intro/intro_screen.dart';
+import 'package:visteme/presentation/pages/login/splash_screen.dart';
 
 class Routes {
   static const splash = '/';
   static const intro = '/intro';
   static const home = '/home';
+  static const blusa = '/blusa';
 
   static Route routes(RouteSettings routeSettings) {
     switch (routeSettings.name) {
@@ -16,7 +16,7 @@ class Routes {
       case intro:
         return _buildRoute(IntroScreen.create);
       case home:
-        return _buildRoute(Home.create);
+        return _buildRoute(MyHome.create);
       default:
         throw Exception('Route does not exists');
     }
