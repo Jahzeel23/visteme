@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:visteme/data/repositories/my_user_repository.dart';
 import 'package:visteme/domain/entities/provider/firebase_provider.dart';
-import 'package:visteme/domain/entities/user.dart';
+import 'package:visteme/data/models/user.dart';
 
 class MyUserRepository extends MyUserRepositoryBase {
   final provider = FirebaseProvider();

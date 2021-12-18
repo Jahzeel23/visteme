@@ -4,6 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:visteme/presentation/pages/intro/intro.dart';
+import 'package:visteme/presentation/pages/intro/intro2.dart';
+import 'package:visteme/presentation/pages/intro/intro3.dart';
+import 'package:visteme/presentation/pages/intro/intro4.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -50,18 +53,23 @@ class _HomePageState extends State<HomePage> {
                     controller: _pageController,
                     children: const [
                       Intro(),
+                      Intro2(),
+                      Intro3(),
+                      Intro4(),
                     ],
                   )),
               SmoothPageIndicator(
                 controller: _pageController,
-                count: 3,
-                effect: SwapEffect(
-                  activeDotColor: Colors.pink,
-                  dotColor: Colors.grey,
-                  dotHeight: 16,
-                  dotWidth: 16,
-                  type: SwapType.yRotation,
-                ),
+                count: 4,
+                effect: SlideEffect(
+                    spacing: 8.0,
+                    radius: 4.0,
+                    dotWidth: 24.0,
+                    dotHeight: 16.0,
+                    paintStyle: PaintingStyle.stroke,
+                    strokeWidth: 1.5,
+                    dotColor: Colors.grey,
+                    activeDotColor: Colors.indigo),
               ),
             ],
           ),

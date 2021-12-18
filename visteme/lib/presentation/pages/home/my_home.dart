@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:visteme/data/repositories/implementations/my_user_repository.dart';
 import 'package:visteme/presentation/bloc/blouse%20cubit/bloc/blusa_bloc.dart';
-import 'package:visteme/presentation/bloc/category%20cubit/bloc/category_bloc.dart';
+import 'package:visteme/presentation/bloc/category%20bloc/category%20bloc/category_bloc.dart';
 import 'package:visteme/presentation/bloc/user%20cubit/my_user_cubit.dart';
 import 'package:visteme/presentation/pages/home/profile%20data/design_my_draw.dart';
 import 'package:visteme/presentation/pages/home/screen%20blusas/blusas_carousel.dart';

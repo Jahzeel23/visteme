@@ -15,20 +15,21 @@ class BlusaCarousel extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: SizedBox(
-        height: 300,
-        child: ListView.builder(
-          shrinkWrap: true,
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20.0,
-            vertical: 10.0,
-          ),
-          scrollDirection: Axis.horizontal,
+        height: 430,
+        child: GridView.builder(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, childAspectRatio: 0.8),
           itemCount: blusas.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(right: 5.0),
-              child: BlusaCard(blusa: blusas[index]),
-            );
+          itemBuilder: (BuildContext context, int index) {
+            return Center(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: BlusaCard(
+                blusa: blusas[index],
+                widthFactor: 2.2,
+              ),
+            ));
           },
         ),
       ),

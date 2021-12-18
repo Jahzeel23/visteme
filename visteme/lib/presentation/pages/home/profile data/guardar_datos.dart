@@ -4,7 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:visteme/domain/entities/user.dart';
+import 'package:visteme/data/models/user.dart';
 import 'package:visteme/presentation/bloc/auth%20cubit/auth_cubit.dart';
 import 'package:visteme/presentation/bloc/user%20cubit/my_user_cubit.dart';
 import 'package:visteme/presentation/pages/home/profile%20data/design_my_draw.dart';
@@ -68,7 +68,7 @@ class _MyUserSectionState extends State<_MyUserSection> {
   @override
   Widget build(BuildContext context) {
     Widget image = Image.asset(
-      'assets/images/intro_3.png',
+      'assets/images/user.png',
       fit: BoxFit.fill,
     );
 
@@ -115,7 +115,7 @@ class _MyUserSectionState extends State<_MyUserSection> {
             TextField(
               controller: _nameController,
               decoration: const InputDecoration(
-                  labelText: 'Nombre',
+                  labelText: 'Nombre(s)',
                   labelStyle: TextStyle(
                       color: Colors.pink, fontSize: 30, fontFamily: "Itim")),
             ),
@@ -123,7 +123,7 @@ class _MyUserSectionState extends State<_MyUserSection> {
             TextField(
               controller: _lastNameController,
               decoration: const InputDecoration(
-                  labelText: 'Last Name',
+                  labelText: 'Apellidos',
                   labelStyle: TextStyle(
                       color: Colors.pink, fontSize: 30, fontFamily: "Itim")),
             ),

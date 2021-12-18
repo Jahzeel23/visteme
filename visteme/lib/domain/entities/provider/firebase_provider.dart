@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:path/path.dart' as path;
-import 'package:visteme/domain/entities/user.dart';
+import 'package:visteme/data/models/user.dart';
 
 class FirebaseProvider {
   User get currentUser {
@@ -27,7 +27,7 @@ class FirebaseProvider {
     final ref = firestore.doc('users/${currentUser.uid}');
     if (image != null) {
       final imagePath =
-          '${currentUser.uid}/profile/${path.basename(image.path)}';
+          'personas/${currentUser.uid}/profile/${path.basename(image.path)}';
       final storageRef = storage.ref(imagePath);
       await storageRef.putFile(image);
       final url = await storageRef.getDownloadURL();

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:visteme/data/repositories/my_user_repository.dart';
-import 'package:visteme/domain/entities/user.dart';
+import 'package:visteme/data/models/user.dart';
 
 class MyUserCubit extends Cubit<MyUserState> {
   final MyUserRepositoryBase _userRepository;
@@ -21,7 +21,7 @@ class MyUserCubit extends Cubit<MyUserState> {
 
   Future<void> getMyUser() async {
     emit(MyUserLoadingState());
-    _user = (await _userRepository.getMyUser()) ?? MyUser('', '', '', 0);
+    _user = (await _userRepository.getMyUser()) ?? const MyUser('', '', '', 0);
     emit(MyUserReadyState(_user, _pickedImage));
   }
 
@@ -48,7 +48,7 @@ class MyUserLoadingState extends MyUserState {}
 class MyUserReadyState extends MyUserState {
   final MyUser user;
   final File? pickedImage;
-  final isSaving;
+  final bool isSaving;
 
   MyUserReadyState(this.user, this.pickedImage, {this.isSaving = false});
 

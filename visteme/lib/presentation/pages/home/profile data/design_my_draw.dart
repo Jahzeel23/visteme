@@ -3,7 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:visteme/domain/entities/user.dart';
+import 'package:visteme/data/models/user.dart';
 import 'package:visteme/presentation/bloc/auth%20cubit/auth_cubit.dart';
 import 'package:visteme/presentation/bloc/user%20cubit/my_user_cubit.dart';
 import 'package:visteme/presentation/pages/home/profile%20data/guardar_datos.dart';
@@ -48,7 +48,7 @@ class _MyDrawState extends State<MyDraw> {
   @override
   Widget build(BuildContext context) {
     Widget image = Image.asset(
-      'assets/images/intro_3.png',
+      'assets/images/user.png',
       fit: BoxFit.fill,
     );
 

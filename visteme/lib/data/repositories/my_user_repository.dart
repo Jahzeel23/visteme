@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:visteme/domain/entities/user.dart';
+import 'package:visteme/data/models/user.dart';
 
 abstract class MyUserRepositoryBase {
   Future<MyUser?> getMyUser();

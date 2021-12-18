@@ -14,7 +14,7 @@ class BlusaModel extends Equatable {
   final String marca;
   final int precio;
   final bool isRecommended;
-  BlusaModel({
+  const BlusaModel({
     required this.descripcion,
     required this.category,
     required this.color,
